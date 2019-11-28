@@ -1,0 +1,10 @@
+[
+  {
+    "op": "add",
+    "path": "/interactData/items/0",
+    "value": {
+      "item": "pat_creditcard"
+    }
+  }
+]
+
