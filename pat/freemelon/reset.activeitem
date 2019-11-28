@@ -1,0 +1,17 @@
+{
+  "itemName" : "pat_creditcard_debug",
+  "level" : 1,
+  "price" : 0,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "description" : "this is a debug item go away",
+  "shortdescription" : "credit card reset",
+  "tooltipKind" : "tool",
+  "category" : "currency",
+  "twoHanded" : true,
+
+  "inventoryIcon" : "creditcard.png?border=1;FF0000;FF0000",
+  "largeImage" : "creditcardbig.png?border=1;FF0000;FF0000",
+
+  "scripts" : ["reset.lua"]
+}

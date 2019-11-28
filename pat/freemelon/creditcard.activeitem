@@ -1,0 +1,17 @@
+{
+  "itemName" : "pat_creditcard",
+  "level" : 1,
+  "price" : 15000,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "Apply for a Credit Card\nFree Watermelon",
+  "shortdescription" : "Credit Card",
+  "tooltipKind" : "tool",
+  "category" : "currency",
+  "twoHanded" : true,
+
+  "inventoryIcon" : "creditcard.png",
+  "largeImage" : "creditcardbig.png",
+
+  "scripts" : ["creditcard.lua"]
+}
