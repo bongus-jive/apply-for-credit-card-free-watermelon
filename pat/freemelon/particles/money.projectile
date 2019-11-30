@@ -1,0 +1,32 @@
+{
+	"projectileName" : "pat_creditcardmoney",
+	"physics" : "default",
+	"timeToLive" : 0,
+	"image" : "yes.png",
+	"animationCycle" : 1,
+	"frameNumber" : 1,
+	"actionOnReap" : [
+		{
+			"action" : "particle",
+			"specification" : {
+				"type" : "textured",
+				"image" : "/interface/money.png",
+				"light" : [70, 70, 70],
+				"fullbright" : true,
+				"initialVelocity" : [0.0, 0.0],
+				"finalVelocity" : [0.0, 0.0],
+				"size" : 0.5,
+				"approach" : [0, 1],
+				"angularVelocity" : 0,
+				"timeToLive" : 0.01,
+				"layer" : "front",
+				"destructionAction" : "fade",
+				"destructionTime" : 0,
+				"flippable" : false
+			}
+		}
+	],
+	"speed" : 0,
+	"power" : 0,
+	"onlyHitTerrain" : true
+}

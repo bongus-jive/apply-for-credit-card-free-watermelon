@@ -10,30 +10,24 @@ function init()
 	
 	self.heldTime = 0
 	self.addCooldown = 0
-	self.particleCooldown = 0
 	self.multiplier = 0
 end
 
 function update(dt, fireMode, shiftHeld)
-	world.debugText("^shadow;"..status.statusProperty("pat_creditcard", 0), vec2.add(mcontroller.position(), {1.5, 2}), "red")
-	world.debugText("^shadow;"..self.addCooldown, vec2.add(mcontroller.position(), {1.5, 1}), "orange")
-	world.debugText("^shadow;"..self.heldTime, vec2.add(mcontroller.position(), {1.5, 0}), "yellow")
-	world.debugText("^shadow;"..self.particleCooldown, vec2.add(mcontroller.position(), {1.5, -1}), "green")
-	world.debugText("^shadow;"..self.multiplier, vec2.add(mcontroller.position(), {1.5, -2}), "cyan")
+	world.debugText("^shadow;"..status.statusProperty("pat_creditcard", 0), vec2.add(mcontroller.position(), {1.5, 1}), "red")
+	world.debugText("^shadow;"..self.addCooldown, vec2.add(mcontroller.position(), {1.5, 0}), "orange")
+	world.debugText("^shadow;"..self.heldTime, vec2.add(mcontroller.position(), {1.5, -1}), "yellow")
+	
+	particle()
 	
 	if self.fireMode ~= "none" then
 		self.addCooldown = math.max(0, self.addCooldown - dt)
 	end
-	self.particleCooldown = math.max(0, self.particleCooldown - dt)
 	
 	self.multiplier = (self.heldTime >= 2.5 and 10 or 1) * (self.heldTime >= 5 and 10 or 1) * (self.heldTime >= 10 and 10 or 1)
 	
 	if fireMode ~= self.lastFireMode then
 		self.heldTime = 0
-		
-		if self.lastFireMode ~= "none" then
-			particle()
-		end
 	end
 	
 	if fireMode == "primary" then
@@ -55,11 +49,6 @@ function update(dt, fireMode, shiftHeld)
 			)
 			
 			self.addCooldown = math.max(0, 0.25 - (self.heldTime / 10))
-		end
-			
-		if self.particleCooldown == 0 then
-			particle()
-			self.particleCooldown = 0.5
 		end
 		
 		self.heldTime = self.heldTime + dt
@@ -85,11 +74,6 @@ function update(dt, fireMode, shiftHeld)
 			
 			self.addCooldown = math.max(0, 0.25 - (self.heldTime / 10))
 		end
-			
-		if self.particleCooldown == 0 then
-			particle()
-			self.particleCooldown = 0.5
-		end
 		
 		self.heldTime = self.heldTime + dt
 	end
@@ -101,12 +85,12 @@ function particle()
 	self.moners = status.statusProperty("pat_creditcard", 0)
 	
 	local params = {}
-	params.actionOnReap = root.assetJson("/pat/freemelon/number/number.projectile").actionOnReap
+	params.actionOnReap = root.assetJson("/pat/freemelon/particles/number.projectile").actionOnReap
 	params.actionOnReap[1].specification.text = "^shadow;"..self.moners
-			
+	
 	world.spawnProjectile(
 		"pat_creditcardnumber",
-		vec2.add(mcontroller.position(), {0, 2.5}),
+		vec2.add(mcontroller.position(), {0, 2.5 - (mcontroller.crouching() and 1 or 0)}),
 		activeItem.ownerEntityId(),
 		{0, 0},
 		false,
