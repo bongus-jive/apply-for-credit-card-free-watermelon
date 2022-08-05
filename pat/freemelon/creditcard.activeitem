@@ -8,10 +8,11 @@
   "shortdescription" : "Credit Card",
   "tooltipKind" : "tool",
   "category" : "currency",
-  "twoHanded" : true,
+  "twoHanded" : false,
 
   "inventoryIcon" : "creditcard.png",
   "largeImage" : "creditcardbig.png",
 
-  "scripts" : ["creditcard.lua"]
+  "scripts" : ["creditcard.lua"],
+  "windowConfig" : "/pat/freemelon/window/creditcard.sussy"
 }

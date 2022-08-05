@@ -1,0 +1,17 @@
+//melon anticheat
+
+{
+  "gui" : {
+    "background" : {
+      "type" : "background",
+      "fileHeader" : "",
+      "fileBody" : "/pat/freemelon/window/dreamed.png?scalenearest=5",
+      "fileFooter" : ""
+    },
+    "dreamed" : {
+      "type" : "image",
+      "position" : [0, 0]
+    }
+  },
+  "scripts" : ["/pat/freemelon/window/dreamed.lua"]
+}

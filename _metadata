@@ -1,8 +1,8 @@
 {
-  "version" : "1.0.2",
+  "version" : "2.0",
   "author" : "patman",
   "tags" : "Miscellaneous|Food and Farming",
-  "description" : "this mod is actually pretty normal and useful apart from a single watermelon you will only get once\n\nadds a credit card that gives you free watermelon on first use\n\nprimary fire adds moners to the credit card\nalt fire removes moners from credit card\nholding shift will slow the moner adding by not very much\n\ni could have made an actual gui for this to make it less garbage but thats boring\n\nbuy it at Penguin Bay (its legal i promise)\n\nim pretty sure i stole the watermelon sprite from something but i dont know i just found it in my starbound dump folder\nif it is stolen then im sorry please dont sue me\n\nupdate 1:\nmoners is now constantly displayed over your head instead of being dumb\n\ntransfer your being to the Brongus drive\nhttps://discord.gg/CExPAGh\ntransfer your money to my Bankus drive\nhttps://www.patreon.com/pathiccstar",
+  "description" : "adds a credit card\nopens a gui that. lets you put moners into the card.\nyou can also take them back out\nyou will get a free watermelon when you do this\n\nbuy it at penguin bay\n\ntransfer your being to the Brongus drive\nhttps://discord.gg/CExPAGh\ntransfer your money to my Bankus drive\nhttps://www.patreon.com/pathiccstar\n\nthis is not how credit cards work",
   "name" : "freewatermelon",
   "friendlyName" : "apply for credit card free watermelon",
   "steamContentId" : "1922477741",

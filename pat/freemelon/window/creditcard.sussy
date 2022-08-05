@@ -1,0 +1,90 @@
+{
+  "gui" : {
+    "background" : {
+      "type" : "background",
+      "fileHeader" : "/pat/freemelon/window/header.png",
+      "fileBody" : "/pat/freemelon/window/body.png",
+      "fileFooter" : "/pat/freemelon/window/footer.png"
+    },
+    "title" : {
+      "type" : "title",
+      "title" : "credit card",
+      "subtitle" : " snedit snard",
+      "icon" : {
+        "type" : "image",
+        "file" : "/interface/pixeliconZ.png",
+        "position" : [0, 0],
+        "zlevel" : -1
+      }
+    },
+    "cardLabel" : {
+      "type" : "label",
+      "position" : [60, 51],
+      "value" : "",
+      "hAnchor" : "mid",
+      "vAnchor" : "bottom"
+    },
+    "cardImage" : {
+      "type" : "image",
+      "file" : "/pat/freemelon/creditcard.png",
+      "position" : [20, 51],
+      "scale" : 0.5
+    },
+    "moneyLabel" : {
+      "type" : "label",
+      "position" : [60, 26],
+      "value" : "",
+      "hAnchor" : "mid",
+      "vAnchor" : "bottom"
+    },
+    "moneyImage" : {
+      "type" : "image",
+      "file" : "/pat/freemelon/window/pixel.png",
+      "position" : [20, 26],
+      "scale" : 0.5
+    },
+    "amountBox" : {
+      "type" : "textbox",
+      "regex" : "[0-9]{0,8}",
+      "position" : [38, 39],
+      "maxWidth" : 34,
+      "hint" : "amount",
+      "callback" : "null"
+    },
+    "arrowUp" : {
+      "type" : "button",
+      "position" : [25, 38],
+      "base" : "/pat/freemelon/window/arrows.png:baseUp",
+      "hover" : "/pat/freemelon/window/arrows.png:hoverUp",
+      "callback" : "transfer",
+      "data" : 0
+    },
+    "arrowDown" : {
+      "type" : "button",
+      "position" : [77, 38],
+      "base" : "/pat/freemelon/window/arrows.png:baseDown",
+      "hover" : "/pat/freemelon/window/arrows.png:hoverDown",
+      "callback" : "transfer",
+      "data" : 1
+    },
+    "melon" : {
+      "type" : "button",
+      "position" : [0, 9],
+      "base" : "/pat/freemelon/window/melon.png",
+      "caption" : "! CLICK HERE 4  FREE WATERMELON !",
+      "textAlign" : "center",
+      "callback" : "melon",
+      "visible" : false
+    },
+    "confetti" : {
+      "type" : "image",
+      "file" : "",
+      "position" : [0, 0],
+      "data" : {"frames" : 42, "file" : "/pat/freemelon/window/confetti.png"}
+    }
+  },
+  
+  "scripts" : ["/pat/freemelon/window/creditcard.lua"],
+  "scriptDelta" : 5,
+  "scriptWidgetCallbacks" : ["transfer", "melon"]
+}
