@@ -81,6 +81,14 @@
       "file" : "",
       "position" : [0, 0],
       "data" : {"frames" : 42, "file" : "/pat/freemelon/window/confetti.png"}
+    },
+    "close" : {
+      "type" : "button",
+      "base" : "/interface/x.png",
+      "hover" : "/interface/xhover.png",
+      "pressed" : "/interface/xpress.png",
+      "pressedOffset" : [0, 0],
+      "position" : [98, 75]
     }
   },
   
